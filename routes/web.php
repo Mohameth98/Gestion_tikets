@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::any('/login', [Controllers\AuthController::class,'showLoginForm'])->name('login');
 Route::post('/loginAction', [Controllers\AuthController::class,'login'])->name('action/login');
 Route::any('logout', [Controllers\AuthController::class,'logout'])->name('logout');
+Route::any('register', [Controllers\C_register::class,'index'])->name('register');
 
    
 Route::get('/layout', [Controllers\Controller::class,'index'])->name('layout');
